@@ -29,5 +29,22 @@ public class Main {
         for (Employee employee : employees) {
             System.out.println(employee.getName() + " -> " + employee.calculateSalary());
         }
+
+        System.out.println("--- Partie F ---");
+        Employee employee = new BackendDeveloper("David", 4000, 700);
+
+        // upcasting : implicite
+        Employee e = new Developer("Emma", 3000);
+
+        // downcasting sécurisé
+        if (employee instanceof BackendDeveloper backendDeveloper) {
+            System.out.println(backendDeveloper.calculateSalary());
+        }
+
+        if (e instanceof BackendDeveloper bd) {
+            System.out.println(bd.calculateSalary());
+        } else {
+            System.out.println("Emma n'est pas un BackendDeveloper, on ne fait pas le cast");
+        }
     }
 }
