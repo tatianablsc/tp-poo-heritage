@@ -16,4 +16,8 @@ public abstract class Employee {
     }
 
     public abstract double calculateSalary();
+
+    public double calculateSalary(int months) {
+        return calculateSalary() * months;
+    }
 }

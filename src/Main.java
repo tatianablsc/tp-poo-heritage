@@ -1,5 +1,6 @@
 import employee.Developer;
 import employee.Manager;
+import employee.BackendDeveloper;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,5 +9,9 @@ public class Main {
 
         System.out.println(alice.describe());
         System.out.println(bob.describe());
+
+        BackendDeveloper chloe = new BackendDeveloper("Chloé", 3800, 600);
+        System.out.println(chloe.describe());
+        System.out.println("Salaire de Chloé sur 12 mois : " + chloe.calculateSalary(12));
     }
 }
