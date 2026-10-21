@@ -3,6 +3,7 @@ import employee.Manager;
 import employee.BackendDeveloper;
 import employee.Employee;
 import java.util.List;
+import employee.FrontendDeveloper;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,7 +24,8 @@ public class Main {
         List<Employee> employees = List.of(
                 new Developer("Alice", 3200),
                 new Manager("Bob", 4500, 800),
-                new BackendDeveloper("Chloé", 3800, 600)
+                new BackendDeveloper("Chloé", 3800, 600),
+                new FrontendDeveloper("Farid", 3400)
         );
 
         for (Employee employee : employees) {
