@@ -1,6 +1,6 @@
 package employee;
 
-public class Developer extends Employee {
+public class Developer extends Employee implements Payable {
     private double baseSalary;
 
     public Developer(String name, double baseSalary) {
@@ -11,5 +11,10 @@ public class Developer extends Employee {
     @Override
     public double calculateSalary() {
         return baseSalary;
+    }
+
+    @Override
+    public double calculatePayment() {
+        return calculateSalary();
     }
 }

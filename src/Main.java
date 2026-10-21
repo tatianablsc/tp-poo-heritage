@@ -9,6 +9,9 @@ public class Main {
 
         System.out.println(alice.describe());
         System.out.println(bob.describe());
+        System.out.println(alice.formatPayment());
+        System.out.println(bob.formatPayment());
+        System.out.println(bob.generateReport());
 
         BackendDeveloper chloe = new BackendDeveloper("Chloé", 3800, 600);
         System.out.println(chloe.describe());

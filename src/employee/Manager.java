@@ -1,6 +1,6 @@
 package employee;
 
-public class Manager extends Employee {
+public class Manager extends Employee implements Payable, Reportable {
     private double baseSalary;
     private double managementBonus;
 
@@ -13,5 +13,21 @@ public class Manager extends Employee {
     @Override
     public double calculateSalary() {
         return baseSalary + managementBonus;
+    }
+
+    @Override
+    public double calculatePayment() {
+        return calculateSalary();
+    }
+
+    @Override
+    public String generateReport() {
+        return "Rapport de " + name + " : salaire de base " + baseSalary
+                + " €, prime de management " + managementBonus + " €";
+    }
+
+    @Override
+    public String formatPayment() {
+        return "Paiement manager (prime incluse) : " + calculatePayment() + " €";
     }
 }

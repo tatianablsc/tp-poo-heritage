@@ -17,6 +17,12 @@ public abstract class Employee {
 
     public abstract double calculateSalary();
 
+    /**
+     * Surcharge : calcule le salaire sur plusieurs mois.
+     *
+     * @param months nombre de mois
+     * @return le salaire total sur la période
+     */
     public double calculateSalary(int months) {
         return calculateSalary() * months;
     }
